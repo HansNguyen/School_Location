@@ -8,6 +8,7 @@ API_key= '&key=Your_API_KEY' # to get a key, google "Get API Key" and follow ins
 while True:
     address = input('Enter location: ')
     if len(address) < 1 : break # if no input of address => Stop sending request
+# In my case, I use a list of predetermined locations in a csv file
 
     url = serviceurl + urllib.parse.urlencode({'address': address}) + API_key
     print ('Retrieving', url)
